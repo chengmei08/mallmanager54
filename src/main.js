@@ -7,6 +7,8 @@ import App from './App'
 
 import router from './router'
 
+import '@/assets/css/index.css'
+
 // 使用vue的插件
 Vue.use(ElementUI)
 
