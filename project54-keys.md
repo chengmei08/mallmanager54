@@ -89,8 +89,13 @@ git push
 2. 在举例异步操作最近的函数前面加 async
 
 #### 15-项目-登录-保存token值
+> 如果用户没登录 就无法进入到home组件
+1. login.vue handleLogin(){登录成功->保存token值}
+2. const token = localStorage.setItem('token',data.token)
 
 #### 16-项目-首页-布局容器-使用
+> 使用element-ui里面的布局容器
+> 自定义了一些样式
 
 #### 17-项目-首页-布局容器-样式调整
 

@@ -40,6 +40,9 @@ export default {
         } = res.data
 
         if (status === 200) {
+          // 0. 保存用户token
+          // 将来在home组件渲染之前 先判断token有没有
+          const token = localStorage.setItem('token',data.token)
           // 1. 跳转到首页home
           this.$router.push({ name: 'home' })
           // 2. 提示登录成功
