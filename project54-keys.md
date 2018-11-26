@@ -70,12 +70,23 @@ git push
 7. 使用: this.$http()
 
 #### 11-项目-登录-发送登录请求
+> 点击登录按钮 发送login请求
+1. http.js 配置baseUrl
+2. login.vue js this.$http.post()
+
 
 #### 12-项目-登录-引入提示框组件
+> this.$message.success(msg)
 
 #### 13-项目-登录-登录成功-进入home组件
+1. 新建home.vue
+2. 配置路由 path:'/'
+3. 编程式导航 this.$router.push({name:'12-项目-登录-引入提示框组件'})
 
 #### 14-项目-登录-简化登录请求代码-async和await
+> 目的: 在异步操作的外面获取到异步操作里面的结果
+1. 给异步操作有结果的位置前面 加 await 通过用变量接收异步操作结果res
+2. 在举例异步操作最近的函数前面加 async
 
 #### 15-项目-登录-保存token值
 
