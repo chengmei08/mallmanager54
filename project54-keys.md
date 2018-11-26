@@ -25,11 +25,22 @@
   - Vue.use(ElementUI)
 
 #### 05-项目-准备-项目模板简化-调整
+> 将模板中无用文件/文件夹 删除
 
 #### 06-项目-准备-git版本控制
+> github (git/svn)
+git init
+git status
+git add .
+git commit -m '注释'
+新建远程仓库
+关联仓库
+git push
 
 #### 07-项目-登录-新建分支-login组件-配置路由
-
+1. git branch
+2. git checkout -b dev-login
+3.
 #### 08-项目-登录-引入表单组件
 
 #### 09-项目-登录-样式调整

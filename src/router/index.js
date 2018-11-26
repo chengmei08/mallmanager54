@@ -1,12 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// import Login from '../components/login/login.vue'
+// @指的是src下 相当于 ./src
+import Login from '@/components/login/login.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/'
+      name:'login',
+      path: '/login',
+      component:Login
     }
   ]
 })
