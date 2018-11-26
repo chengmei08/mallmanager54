@@ -13,14 +13,13 @@
             <el-input v-model="formdata.password"></el-input>
         </el-form-item>
         <el-button @click.prevent="handleLogin()" class="login-btn" type="primary">登录</el-button>
-
     </el-form>
 </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       formdata: {
         username: '',
@@ -30,29 +29,27 @@ export default {
   },
   methods: {
     // 登录请求
-    async handleLogin() {
+    async handleLogin () {
       const res = await this.$http.post('login', this.formdata)
 
-        console.log(res)
-        const {
-          meta: { msg, status },
-          data
-        } = res.data
+      console.log(res)
+      const {
+        meta: { msg, status },
+        data
+      } = res.data
 
-        if (status === 200) {
-          // 0. 保存用户token
-          // 将来在home组件渲染之前 先判断token有没有
-          const token = localStorage.setItem('token',data.token)
-          // 1. 跳转到首页home
-          this.$router.push({ name: 'home' })
-          // 2. 提示登录成功
-          this.$message.success(msg)
-        } else {
-          // 3. 如果失败 -> 提示用户
-          this.$message.warning(msg)
-        }
-
-
+      if (status === 200) {
+        // 0. 保存用户token
+        // 将来在home组件渲染之前 先判断token有没有
+        const token = localStorage.setItem('token', data.token)
+        // 1. 跳转到首页home
+        this.$router.push({ name: 'home' })
+        // 2. 提示登录成功
+        this.$message.success(msg)
+      } else {
+        // 3. 如果失败 -> 提示用户
+        this.$message.warning(msg)
+      }
 
       // 目的: 不想在异步操作ajax .then方法的内部获取异步操作的结果
       // this.$http.post('login', this.formdata).then(res => {
