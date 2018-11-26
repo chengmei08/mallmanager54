@@ -40,12 +40,34 @@ git push
 #### 07-项目-登录-新建分支-login组件-配置路由
 1. git branch
 2. git checkout -b dev-login
-3.
-#### 08-项目-登录-引入表单组件
+3. 新建login.vue组件
+4. 配置路由 index.js 导入login.vue 配置
+> @指的是src下  '@/components/login/login.vue'
 
+#### 08-项目-登录-引入表单组件
+1. 找到element-ui的表单组件
+2. 提供formdata
+3. h3
+4. <el-button></el-button>
 #### 09-项目-登录-样式调整
+> height:100% #app{height:100%}
+> main.js 不要忘记引入 css/index.css重置层
 
 #### 10-项目-登录-axios插件
+> 把不是vue插件的axios库 改成了vue插件
+1. 新建http.js
+2. import axios from 'axios'
+3. const MyHttpServer = {}
+4. 增加install属性
+```js
+ MyHttpServer.install = (Vue)=>{
+  <!-- 插件功能 -->
+  Vue.prototype.$http = axios
+}
+```
+5. 导出 export default MyHttpServer
+6. 在main.js  Vue.use(MyHttpServer)
+7. 使用: this.$http()
 
 #### 11-项目-登录-发送登录请求
 
